@@ -1,0 +1,87 @@
+
+
+<html>
+	<head>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.grid-container{
+				width: 100%;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+				grid-auto-rows: minmax(9rem, auto);
+				grid-gap: 1rem;
+
+			}
+			.grid-item{
+				background-color: #cce3f1;
+				color: #222;
+				border: 1px solid #000;
+				border-radius: 1px;
+				padding:2rem;
+				position: relative;
+				font-weight: bold;
+			}
+			.grid-item:nth-child(odd){
+				background-color: #0c4264;
+				color: #FFF;
+			}
+			.grid-item:before{
+				position: absolute;
+				content: "Grid Item";
+				top: 0.8rem;
+				left: .3rem;
+				font-size: 1.5rem;
+			}
+			.grid-item:after{
+				position: absolute;
+				top:.8rem;
+				right: .3rem;
+				font-size:1.5rem;
+				
+			}
+			.grid-item-1:after{
+				content: '1';
+			}
+			.grid-item-2:after{
+				content: '2';
+			}
+			.grid-item-3:after{
+				content: '3';
+			}
+			.grid-item-4:after{
+				content: '4';
+			}
+			.grid-item-5::after{
+				content: '5';
+			}
+			.grid-item-6:after{
+				content: '6';
+			}
+			.grid-item-7:after{
+				content: '7';
+			}
+			.grid-item-8:after{
+				content: '8';
+			}
+			.grid-item-9:after{
+				content: '9';
+			}
+        
+		</style>
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class="grid-item grid-item-1"></div>
+			<div class="grid-item grid-item-2"></div>
+			<div class="grid-item grid-item-3"></div>
+			<div class="grid-item grid-item-4"></div>
+			<div class="grid-item grid-item-5"></div>
+			<div class="grid-item grid-item-6"></div>
+			<div class="grid-item grid-item-7"></div>
+			<div class="grid-item grid-item-8"></div>
+			<div class="grid-item grid-item-9"></div>
+		</div>
+	</body>
+</html>
